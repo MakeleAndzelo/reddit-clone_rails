@@ -1,0 +1,11 @@
+%h1 Check the newest, intresting links: 
+
+-@links.each do |link|
+	%hr/
+	%h3
+		=link_to(link.title, link)
+	%p= link.description
+	%small
+		Created at
+		=time_ago_in_words(link.created_at)
+		ago

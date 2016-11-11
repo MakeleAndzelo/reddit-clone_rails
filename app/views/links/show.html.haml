@@ -1,0 +1,13 @@
+%h1= @link.title
+%small
+	Created at
+	=time_ago_in_words(@link.created_at)
+	ago
+%br
+=link_to(@link.url, @link.url)
+%p
+	=link_to("Edit", edit_link_path(@link), class: "btn btn-warning")
+	=link_to("Delete", @link, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger")
+%hr/
+%h4 Description: 
+%p= @link.description
