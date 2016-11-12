@@ -10,5 +10,11 @@
 		=link_to("Edit", edit_link_path(@link), class: "btn btn-warning")
 		=link_to("Delete", @link, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger")
 %hr/
-%h4 Description: 
+%h3 Description: 
 %p= @link.description
+%hr/
+%h3 Comments: 
+=render @link.comments
+%hr/
+%h3 Add new comment:
+=render 'comments/form'

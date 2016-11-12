@@ -1,0 +1,4 @@
+%h1 Edit Comment:
+=simple_form_for([@link, @comment]) do |f|
+	=f.input :body, as: :text, require: true
+	=f.button :submit
